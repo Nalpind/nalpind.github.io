@@ -1,18 +1,19 @@
 import "./About.css"
 import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax"
-import front from "../assets/front.png"
-import back from "../assets/back.png"
+import medium from "../assets/Medium.png"
+import back from "../assets/Background.png"
+import far from "../assets/Far.png"
 function About() {
     return (
         <ParallaxBanner style={{ aspectRatio: '1 / 2' }}>
-            <ParallaxBannerLayer speed={-30}>
-                <img src={back} style={{ width: '100%' }} />
+            <ParallaxBannerLayer speed={-100}>
+                <img src={back} style={{ width: '100vw' }} />
             </ParallaxBannerLayer>
-            <ParallaxBannerLayer speed={-10}>
-                <img src={front} style={{ width: '100%' }} />
+            <ParallaxBannerLayer speed={-50}>
+                <img src={far} style={{ width: '100vw' }} />
             </ParallaxBannerLayer>
-            <ParallaxBannerLayer speed={-60}>
-                <img src={back} style={{ width: '100%',  }} />
+            <ParallaxBannerLayer speed={0}>
+                <img src={medium} style={{ width: '100vw'  }} />
             </ParallaxBannerLayer>
         </ParallaxBanner>
     )

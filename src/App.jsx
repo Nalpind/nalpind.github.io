@@ -12,7 +12,7 @@ function App() {
       <ParallaxProvider>
         {/* <BrowserRouter> */}
         {/* <Nav /> */}
-        <div style={{ height: 2000 }}>
+        <div style={{ height: '3500px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
           <About />
         </div>
         {/* <Routes> */}
