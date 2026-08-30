@@ -16,6 +16,7 @@
     "@tailwindcss/vite": "^4.3.3",
     "@types/three": "^0.185.4",
     "lottie-web": "^5.13.0",
+    "prettier-plugin-tailwindcss": "^0.8.1",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-router-dom": "^7.18.2",

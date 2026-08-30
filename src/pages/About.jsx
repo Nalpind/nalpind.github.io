@@ -1,11 +1,5 @@
-import "./About.css"
-
 function About() {
-    return (
-        <diV>
-            hi
-        </diV>
-    )
+  return <div>hi</div>;
 }
 
-export default About
+export default About;
