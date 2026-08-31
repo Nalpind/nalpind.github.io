@@ -1,6 +1,3 @@
-import { useState } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { Experience } from '../components/Experience';
 function Home() {
   return (
     <div>
@@ -26,9 +23,7 @@ function Home() {
             experience.
           </span>
         </div>
-        {/* <Canvas>
-          <Experience />
-        </Canvas> */}
+
       </div>
     </div>
   );
