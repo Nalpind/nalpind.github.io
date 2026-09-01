@@ -1,23 +1,19 @@
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
+import { Suspense } from 'react';
 import { Experience } from '../components/Experience';
 import { UI } from '../components/UI';
 
 const Customizer = () => {
   return (
-    // <div className="flex-col relative grow outline-3 -outline-offset-2">
-    //     <div className="h-full w-full absolute outline-5 -outline-offset-5">
-    //       <Canvas>
-    //         <Experience />
-    //       </Canvas>
-    //     </div>
-    //   </div>
-    <main className="flex relative grow">
+    <div className="relative flex h-[75vh] w-full overflow-hidden">
       <UI />
-      <Canvas>
-        <Experience />
+      <Canvas camera={{ position: [0, 0, 5], fov: 45 }} className="h-full w-full">
+        <Suspense fallback={null}>
+          <Experience />
+        </Suspense>
       </Canvas>
-    </main>
+    </div>
   );
 };
 

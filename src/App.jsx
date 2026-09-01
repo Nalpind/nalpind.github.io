@@ -11,13 +11,13 @@ function App() {
       <BrowserRouter>
         <div className="flex min-h-screen flex-col bg-linear-to-b from-slate-950 via-stone-900 to-black text-slate-100">
           <Nav />
-          <main className="flex grow ">
+          <div className="flex grow ">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/customizer" element={<Customizer />} />
             </Routes>
-          </main>
+          </div>
           <Footer />
         </div>
       </BrowserRouter>
