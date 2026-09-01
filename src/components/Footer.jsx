@@ -1,22 +1,14 @@
-import React from 'react'
+import React from 'react';
 
 const Footer = () => {
-    return (
-        <div className='flex p-4 gap-4 h-1/48 bg-slate-900 bg-blend-multiply text-taupe-100 w-full'>
-            <div>
-                Link
-            </div>
-            <div>
-                Link
-            </div>
-            <div>
-                Link
-            </div>
-            <div>
-                Link
-            </div>
-        </div>
-    )
-}
+  return (
+    <div className="flex h-1/48 w-full gap-4 bg-slate-900 p-4 text-taupe-100 bg-blend-multiply">
+      <div>Link</div>
+      <div>Link</div>
+      <div>Link</div>
+      <div>Link</div>
+    </div>
+  );
+};
 
-export default Footer
+export default Footer;

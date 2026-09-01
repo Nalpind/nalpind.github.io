@@ -9,15 +9,15 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <div className="flex flex-col min-h-screen text-slate-100 bg-linear-to-b from-slate-950 via-stone-900 to-black">
+        <div className="flex min-h-screen flex-col bg-linear-to-b from-slate-950 via-stone-900 to-black text-slate-100">
           <Nav />
-          <div className='flex-col flex grow'>
+          <main className="flex grow ">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/customizer" element={<Customizer />} />
             </Routes>
-          </div>
+          </main>
           <Footer />
         </div>
       </BrowserRouter>
