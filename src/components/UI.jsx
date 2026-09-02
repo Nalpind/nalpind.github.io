@@ -1,8 +1,9 @@
-
 import { useZStore } from '../store/useZStore';
 
 export const UI = () => {
-  const { assetProperties, setSelectedAsset, selectedAssets } = useZStore();
+  const { assetProperties, setSelectedAsset, selectedAssets, updateAssetProperty, getSelectedAssetData } = useZStore();
+
+
 
   return (
     <div className="pointer-events-none absolute inset-0 z-10 flex justify-between">
@@ -10,10 +11,27 @@ export const UI = () => {
         <div className="font-semibold uppercase tracking-[0.2em] text-slate-300">Menu L</div>
         <div className="rounded-xl border border-slate-700 bg-slate-900/60 p-3">Slider</div>
         <div className="rounded-xl border border-slate-700 bg-slate-900/60 p-3">Slider</div>
-        <div className="rounded-xl border border-slate-700 bg-slate-900/60 p-3">Slider</div>
+        <div >
+          <div className="pointer-events-auto h-full">
+            <button
+              onClick={() => {
+                const curPos = getSelectedAssetData('head').position.x;
+                updateAssetProperty('head', 'var1', 'position', {
+                  x: curPos + 1,
+                  y: 0,
+                  z: 0,
+                });
+                console.log(assetProperties)
+              }}
+              type="button"
+            >
+              Add X
+            </button>
+
+          </div>
+        </div>
       </div>
 
-      <div className="self-center text-center text-slate-200">Mid</div>
 
       <div className="flex h-[85%] w-[28rem] flex-row self-center">
         <div className="pointer-events-auto flex w-12 flex-col justify-center gap-4 py-5">
@@ -37,9 +55,8 @@ export const UI = () => {
                       key={variant.id}
                       type="button"
                       onClick={() => setSelectedAsset(assetType, variant.id)}
-                      className={`aspect-square rounded-2xl border p-2 transition ${
-                        isSelected ? 'border-cyan-400 bg-cyan-500/20' : 'border-slate-600 bg-amber-200'
-                      }`}
+                      className={`aspect-square rounded-2xl border p-2 transition ${isSelected ? 'border-cyan-400 bg-cyan-500/20' : 'border-slate-600 bg-amber-200'
+                        }`}
                     >
                       <div className="flex h-full items-center justify-center rounded-xl bg-slate-50/80 text-xs font-semibold text-slate-900">
                         {variant.id}
@@ -55,3 +72,4 @@ export const UI = () => {
     </div>
   );
 };
+
