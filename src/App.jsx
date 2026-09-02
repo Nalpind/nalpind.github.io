@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
+import { HashRouter, Routes, Route, NavLink } from 'react-router-dom';
 import About from './pages/About';
 import Home from './pages/Home';
 import Nav from './components/NavBar';
@@ -8,7 +8,7 @@ import Customizer from './pages/Customizer';
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <div className="flex min-h-screen flex-col bg-linear-to-b from-slate-950 via-stone-900 to-black text-slate-100">
           <Nav />
           <div className="flex grow ">
@@ -20,7 +20,7 @@ function App() {
           </div>
           <Footer />
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
