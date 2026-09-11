@@ -6,8 +6,8 @@ function Model(props) {
 
   return (
     <group>
-      {/* <primitive object={body.scene} {...props} />
-      <primitive object={head.scene} {...props} /> */}
+      <primitive object={body.scene} {...props} />
+      <primitive object={head.scene} {...props} />
     </group>
   )
 }
