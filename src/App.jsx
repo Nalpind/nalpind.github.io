@@ -16,7 +16,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/customizer" element={<Customizer />} />
+              <Route path="/customizerOld" element={<Customizer />} />
             </Routes>
           </div>
           <Footer />
