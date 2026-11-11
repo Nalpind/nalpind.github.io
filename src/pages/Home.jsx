@@ -1,4 +1,5 @@
 import LogoLoop from '../components/LogoLoop';
+import ProjectCards from '../components/ProjectCards';
 import {
 	SiTailwindcss,
 	SiRender,
@@ -59,9 +60,8 @@ const techLogos = [
 
 function Home() {
 	return (
-		<div>
-			<div className='t-0 l-0 absolute z-1'></div>
-			<div className='h-screen w-screen grid grid-cols-3 md:grid-cols-9'>
+		<div className=''>
+			<div className='h-screen w-full grid grid-cols-3 md:grid-cols-9'>
 				<div className='flex justify-center flex-col gap-1 md:gap-5 col-span-3 md:col-span-4 pl-10 md:pl-20'>
 					<span className='text-4xl md:text-8xl '>Hi,</span>
 					<span className='text-4xl md:text-8xl font-bold'>I'm Grey,</span>
@@ -69,11 +69,12 @@ function Home() {
 				</div>
 				<div className='col-span-3 md:col-span-5 flex justify-center items-center text-3xl'>MODEL PLACEHOLDER</div>
 			</div>
-			<div className='h-screen w-screen'>
+			<div className='h-screen w-full'>
 				<LogoLoop logos={techLogos} speed={60} direction='left' logoHeight={36} gap={54} hoverSpeed={0} scaleOnHover ariaLabel='Technology partners' />
 				<span className=''>Crafting spaces where code meets canvas.</span>
 				<span className=''>What goes into it?</span>
 				<span className=''>I am a creative developer specializing in motion design and 3D interaction. Translating complex logic into a seamless immersive experience.</span>
+				<ProjectCards />
 			</div>
 		</div>
 	);
